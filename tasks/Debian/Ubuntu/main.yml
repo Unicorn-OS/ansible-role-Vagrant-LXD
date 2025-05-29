@@ -1,0 +1,10 @@
+---
+#- name: Ubuntu source
+#  include_tasks: "source/{{ Ubuntu_source }}.yml"
+
+- name: Install Vagrant for LXD
+  apt:
+    pkg:
+    - vagrant-lxc
+  become: true
+
